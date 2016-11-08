@@ -3,6 +3,7 @@ pt-BR:
   activerecord:
     models:
       school: escola
+      course: curso
     attributes:
       school:
         name: Nome
@@ -10,6 +11,15 @@ pt-BR:
         pitch: Pitch
         subdomain: Subdomínio
         creation_date: Data de criação
+      course:
+        title: Título
+        school: Escola
+        description: Descrição
+        content: Conteúdo
+        duration: Duração
+        creation_date: Data de criação
+        active_students: Alunos ativos
+        price: Preço
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
@@ -233,14 +243,26 @@ pt-BR:
     header:
       app_name: Edools
       schools: Escolas
+      courses: Cursos
     models:
       school:
         listing: Listando escolas
         new: Nova escola
         editing: Editando %{name}
-        showing: Editando %{name}
         name: Nome
         email: E-mail
         pitch: Pitch
         subdomain: Subdomínio
         creation_date: Data de criação
+      course:
+        listing: Listando cursos
+        new: Novo curso
+        editing: Editando %{name}
+        title: Título
+        school: Escola
+        description: Descrição
+        content: Conteúdo
+        duration: Duração
+        creation_date: Data de criação
+        active_students: Alunos ativos
+        price: Preço

@@ -1,0 +1,68 @@
+<%= form_for(@course, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @course.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h4>
+
+      <ul>
+      <% @course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :title, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :school, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.collection_select :school_id, @schools, :id, :name, {}, {class: "form-control"} %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :description, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :content, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_area :content, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :duration, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :duration, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :creation_date, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.date_select :creation_date, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :active_students, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :active_students, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :price, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :price, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

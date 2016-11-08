@@ -1,0 +1,38 @@
+<div class="page-header">
+  <%= link_to courses_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <%= t 'views.back' %>
+  <% end %>
+  <%= link_to edit_course_path(@course), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    <%= t 'views.edit' %>
+  <% end %>
+  <h1><%= @course.title %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><%= t 'views.models.course.title' %></dt>
+  <dd><%= @course.title %></dd>
+
+  <dt><%= t 'views.models.course.school' %></dt>
+  <dd><%= @course.school.name %></dd>
+
+  <dt><%= t 'views.models.course.description' %></dt>
+  <dd><%= @course.description %></dd>
+
+  <dt><%= t 'views.models.course.content' %></dt>
+  <dd><%= @course.content %></dd>
+
+  <dt><%= t 'views.models.course.duration' %></dt>
+  <dd><%= @course.duration %></dd>
+
+  <dt><%= t 'views.models.course.creation_date' %></dt>
+  <dd><%= @course.creation_date %></dd>
+
+  <dt><%= t 'views.models.course.active_students' %></dt>
+  <dd><%= @course.active_students %></dd>
+
+  <dt><%= t 'views.models.course.price' %></dt>
+  <dd><%= @course.price %></dd>
+
+</dl>
