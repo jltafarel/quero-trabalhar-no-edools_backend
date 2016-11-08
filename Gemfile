@@ -12,6 +12,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'responders'
 gem 'bootstrap-generators', '~> 3.3.4'
+gem 'record_tag_helper', '~> 1.0'
+gem 'has_scope'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -22,7 +24,6 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'spring'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
@@ -32,6 +33,8 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'shoulda-matchers', '~> 3.1'
   gem 'capybara'
+  gem 'simplecov', require: false
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

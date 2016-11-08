@@ -1,0 +1,47 @@
+<div class="page-header">
+  <%= link_to new_school_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    <%= t 'views.models.school.new' %>
+  <% end %>
+  <h1><%= t 'views.models.school.new' %></h1>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="text" class="form-control" id="name_search" name='name_search' placeholder="Nome">
+      </div>
+      <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th><%= t 'views.models.school.name' %></th>
+          <th><%= t 'views.models.school.email' %></th>
+          <th><%= t 'views.models.school.pitch' %></th>
+          <th><%= t 'views.models.school.subdomain' %></th>
+          <th><%= t 'views.models.school.creation_date' %></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <%= content_tag_for(:tr, @schools) do |school| %>
+          <td><%= school.name %></td>
+          <td><%= school.email %></td>
+          <td><%= school.pitch %></td>
+          <td><%= school.subdomain %></td>
+          <td><%= school.creation_date %></td>
+          <td><%= link_to t('views.show'), school %></td>
+          <td><%= link_to t('views.edit'), edit_school_path(school) %></td>
+          <td><%= link_to t('views.destroy'), school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

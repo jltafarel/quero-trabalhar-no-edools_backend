@@ -1,6 +1,15 @@
 ---
 pt-BR:
   activerecord:
+    models:
+      school: escola
+    attributes:
+      school:
+        name: Nome
+        email: E-mail
+        pitch: Pitch
+        subdomain: Subdomínio
+        creation_date: Data de criação
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
@@ -221,3 +230,17 @@ pt-BR:
     edit: Editar
     destroy: Excluir
     back: Voltar
+    header:
+      app_name: Edools
+      schools: Escolas
+    models:
+      school:
+        listing: Listando escolas
+        new: Nova escola
+        editing: Editando %{name}
+        showing: Editando %{name}
+        name: Nome
+        email: E-mail
+        pitch: Pitch
+        subdomain: Subdomínio
+        creation_date: Data de criação

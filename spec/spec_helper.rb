@@ -1,5 +1,7 @@
 require 'support/factory_girl'
 require 'capybara/rspec'
+require 'simplecov'
+SimpleCov.start
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -11,8 +13,4 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
-
-  config.after :all do
-    ActiveRecord::Base.subclasses.each(&:delete_all)
-  end
 end

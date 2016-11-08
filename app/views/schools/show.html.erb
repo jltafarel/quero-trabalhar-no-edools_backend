@@ -1,0 +1,29 @@
+<div class="page-header">
+  <%= link_to schools_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    <%= t 'views.back' %>
+  <% end %>
+  <%= link_to edit_school_path(@school), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    <%= t 'views.edit' %>
+  <% end %>
+  <h1><%= t 'views.models.school.new', name: @school.name %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><%= t 'views.models.school.name' %></dt>
+  <dd><%= @school.name %></dd>
+
+  <dt><%= t 'views.models.school.email' %></dt>
+  <dd><%= @school.email %></dd>
+
+  <dt><%= t 'views.models.school.pitch' %></dt>
+  <dd><%= @school.pitch %></dd>
+
+  <dt><%= t 'views.models.school.subdomain' %></dt>
+  <dd><%= @school.subdomain %></dd>
+
+  <dt><%= t 'views.models.school.creation_date' %></dt>
+  <dd><%= @school.creation_date %></dd>
+
+</dl>
